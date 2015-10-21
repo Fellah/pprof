@@ -10,8 +10,14 @@ import (
 	"strings"
 )
 
+const (
+	SRC_HEAP = "/debug/pprof/heap"
+	SRC_TRACE = "/debug/pprof/trace?seconds=5"
+	SRC_PROFILE = "/debug/pprof/profile"
+)
+
 func main() {
-	source := "http://devel:8080/debug/pprof/"
+	source := "http://devel:8080" + SRC_PROFILE
 
 	var a []string
 
